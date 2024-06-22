@@ -24,7 +24,11 @@ abstract class Creature {
 
 }
 
-class Goblin extends Creature{
+interface Interactable{
+    public void interact();
+}
+
+class Goblin extends Creature implements Interactable{
     int damage = 50;
 
     public Goblin(String name, int health) {
@@ -67,9 +71,13 @@ class Goblin extends Creature{
     }
 
 
+    @Override
+    public void interact() {
+        System.out.println("Your in Goblin Room");
+    }
 }
 
-class Dragon extends Creature {
+class Dragon extends Creature implements Interactable{
 
     int damage = 100;
 
@@ -110,6 +118,11 @@ class Dragon extends Creature {
             System.out.println(player_name + " got Defeated");
         }
         return player_health;
+    }
+
+    @Override
+    public void interact() {
+        System.out.println("Your in Dragon Room");
     }
 }
 
@@ -199,21 +212,27 @@ public class DungeonGame {
                             List<String> potion_return = potion_class.potionSize();
                             if(!weapon_return.isEmpty() && goblin_class.health>0){
                                 System.out.println(player_name +" Entered into the Goblin Room");
+                                goblin_class.interact();
                                 goblin_class.attack(weapon_return,player_name);
                             }else if(!potion_return.isEmpty() && goblin_class.health>0){
                                 System.out.println(player_name +" Entered into the Goblin Room");
+                                goblin_class.interact();
                                 goblin_class.attack(potion_return,player_name);
                             }else if(weapon_return.isEmpty() && player_health>0){
                                 System.out.println(player_name +" Entered into the Goblin Room");
+                                goblin_class.interact();
                                 player_health = goblin_class.takeDamage(player_health,50,player_name);
                             }else if(potion_return.isEmpty() && player_health>0){
                                 System.out.println(player_name +" Entered into the Goblin Room");
+                                goblin_class.interact();
                                 player_health = goblin_class.takeDamage(player_health,50,player_name);
                             } else if (!weapon_return.isEmpty() && dragon_class.health>0 && player_health>0) {
                                 System.out.println(player_name +"Your Entered into the Dragon Room");
+                                dragon_class.interact();
                                 dragon_class.attack(weapon_return,player_name);
                             } else if (!potion_return.isEmpty() && dragon_class.health>0 && player_health>0) {
                                 System.out.println(player_name +" Entered into the Dragon Room");
+                                dragon_class.interact();
                                 dragon_class.attack(potion_return,player_name);
                             }
                         } else if (enemy_value == 2) {
@@ -221,21 +240,27 @@ public class DungeonGame {
                             List<String> potion_return = potion_class.potionSize();
                             if(!weapon_return.isEmpty() && dragon_class.health>0){
                                 System.out.println(player_name +" Entered into the Dragon Room");
+                                dragon_class.interact();
                                 dragon_class.attack(weapon_return,player_name);
                             }else if(!potion_return.isEmpty() && dragon_class.health>0){
                                 System.out.println(player_name +" Entered into the Dragon Room");
+                                dragon_class.interact();
                                 dragon_class.attack(potion_return,player_name);
                             }else if(weapon_return.isEmpty() && player_health>0){
                                 System.out.println(player_name +" Entered into the Dragon Room");
+                                dragon_class.interact();
                                 player_health = dragon_class.takeDamage(player_health,70,player_name);
                             } else if (potion_return.isEmpty() && player_health>0) {
                                 System.out.println(player_name +" Entered into the Dragon Room");
+                                dragon_class.interact();
                                 player_health = dragon_class.takeDamage(player_health,70,player_name);
                             } else if (!weapon_return.isEmpty() && goblin_class.health>0 && player_health>0) {
                                 System.out.println(player_name +" Entered into the Goblin Room");
+                                goblin_class.interact();
                                 goblin_class.attack(weapon_return,player_name);
                             }else if (!potion_return.isEmpty() && goblin_class.health>0 && player_health>0) {
                                 System.out.println(player_name +" Entered into the Goblin Room");
+                                goblin_class.interact();
                                 goblin_class.attack(potion_return,player_name);
                             }
                         }

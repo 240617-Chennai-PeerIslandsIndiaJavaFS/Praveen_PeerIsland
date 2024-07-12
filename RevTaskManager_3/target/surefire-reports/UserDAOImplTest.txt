@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: UserDAOImplTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.065 s <<< FAILURE! -- in UserDAOImplTest
+UserDAOImplTest.testRegisterUser_Success -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.example.DAO.UserDAOImpl.registerUser(org.example.model.User)" because "this.userDAO" is null
+	at UserDAOImplTest.testRegisterUser_Success(UserDAOImplTest.java:51)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+UserDAOImplTest.testLoginUser_Success -- Time elapsed: 0.003 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.example.DAO.UserDAOImpl.loginUser(String, String)" because "this.userDAO" is null
+	at UserDAOImplTest.testLoginUser_Success(UserDAOImplTest.java:36)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+
+UserDAOImplTest.testRegisterUser_SQLException -- Time elapsed: 0.012 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.example.DAO.UserDAOImpl.registerUser(org.example.model.User)" because "this.userDAO" is null
+	at UserDAOImplTest.testRegisterUser_SQLException(UserDAOImplTest.java:71)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+

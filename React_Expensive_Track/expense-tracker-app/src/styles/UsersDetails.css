@@ -1,0 +1,37 @@
+
+.users-details {
+    margin: 20px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .users-details h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .users-details table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .users-details th, .users-details td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .users-details th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .users-details tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .users-details tr:hover {
+    background-color: #f1f1f1;
+  }
+  

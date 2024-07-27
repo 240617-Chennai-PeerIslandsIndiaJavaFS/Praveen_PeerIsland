@@ -1,0 +1,19 @@
+.expense-list {
+    margin-bottom: 20px;
+  }
+  
+  .expense-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .expense-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .expense-summary {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  

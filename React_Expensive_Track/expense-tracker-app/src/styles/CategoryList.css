@@ -1,0 +1,10 @@
+.category-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .category-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
